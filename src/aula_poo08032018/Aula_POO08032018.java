@@ -15,7 +15,13 @@ public class Aula_POO08032018 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        String nomeRecebido;
+        Msg msg = new Msg();
+        
+        nomeRecebido = msg.prompt("Insira um texto");
+        msg.mostra(nomeRecebido);
+        msg.texto(nomeRecebido);
+        msg.pedeNumero("Insira um número");
     }
     
 }
