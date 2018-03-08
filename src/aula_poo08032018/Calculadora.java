@@ -10,7 +10,7 @@ package aula_poo08032018;
  * @author meirinaldojunior
  */
 public class Calculadora {
-    private Boolean padrao = true;
+    private static Boolean padrao = true;
     
     /**Realiza a operação e retorna o resultado
         *Se o atributo “padrao” for falso, a operação deve ser
@@ -19,7 +19,7 @@ public class Calculadora {
         *@param gol Um numero inteiro
         *@return A soma dos numeros passados
     */
-    public int soma(int a, int gol){
+    public static int soma(int a, int gol){
         if(padrao){
             return(a+gol);
         }else{
@@ -34,11 +34,19 @@ public class Calculadora {
         *@param vai Um numero inteiro
         *@return O produto dos numeros passados
     */
-    public double multiplica(int xau, int vai){
+    public static double multiplica(int xau, int vai){
         if(padrao){
             return(xau*vai);
         }else{
             return(xau/vai);
         }
+    }
+    
+    /**
+     * Exibe para o usuário o texto das operações
+     * @param x parametro da operação recebida
+     */
+    public static void exibe(String x){
+        System.out.println(x);
     }
 }
