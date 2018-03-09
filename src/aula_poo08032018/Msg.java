@@ -5,8 +5,6 @@
  */
 package aula_poo08032018;
 
-import java.awt.Dialog;
-import javax.annotation.processing.Messager;
 import javax.swing.JOptionPane;
 
 /**
