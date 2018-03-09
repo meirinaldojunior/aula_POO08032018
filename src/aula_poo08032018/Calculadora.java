@@ -63,7 +63,6 @@ public class Calculadora {
         
         try {
             num = Integer.parseInt(JOptionPane.showInputDialog(msgUI));
-            JOptionPane.showMessageDialog(null, num);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Você inseriu um tipo de dado incorreto");
         }
