@@ -5,6 +5,8 @@
  */
 package aula_poo08032018;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author meirinaldojunior
@@ -27,16 +29,21 @@ public class Aula_POO08032018 {
         Msg.texto(nomeRecebido);
         Msg.pedeNumero("Insira um número");
         
+        //Chamo a mensagem de início do segundo teste!
+        JOptionPane.showMessageDialog(null, "Agora iniciaremos os testes da calculadora");
+        
         /**
          * Realiza equações matemáticas
          * se o valor setado manual do boolean 'padrao' true
          */
-               
-        Calculadora.exibe(String.valueOf(Calculadora.soma(3, 5)));
-        Calculadora.exibe(String.valueOf(Calculadora.soma(8, 1)));
         
-        Calculadora.exibe(String.valueOf(Calculadora.multiplica(3, 5)));
-        Calculadora.exibe(String.valueOf(Calculadora.multiplica(3, 5)));
+        Calculadora calc = new Calculadora();
+        
+        calc.exibe(String.valueOf(calc.soma(calc.solicitaNumero("Digite um número para soma"), 
+                                            calc.solicitaNumero("Digite outro número"))));
+        
+        calc.exibe(String.valueOf(calc.multiplica(calc.solicitaNumero("Digite um número para Multiplicação"), 
+                                                  calc.solicitaNumero("Digite outro número"))));
 
         
     }

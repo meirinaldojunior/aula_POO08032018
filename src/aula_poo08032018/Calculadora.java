@@ -5,6 +5,8 @@
  */
 package aula_poo08032018;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author meirinaldojunior
@@ -47,6 +49,25 @@ public class Calculadora {
      * @param x parametro da operação recebida
      */
     public static void exibe(String x){
-        System.out.println(x);
+        JOptionPane.showMessageDialog(null,"O resultado da equação: "+x);
+    }
+    
+    /**
+     * Exibe caixa de dialog input solicitando o número para o usuário; faz o teste se o tipo do dado informado é realmente um inteiro.
+     * @param msgUI String que receberá do solicitante do método com o texto a ser exibido na caixa de dialog input.
+     * @return retorna o número recebido
+     */
+    public static int solicitaNumero(String msgUI){
+        
+        int num = 0;
+        
+        try {
+            num = Integer.parseInt(JOptionPane.showInputDialog(msgUI));
+            JOptionPane.showMessageDialog(null, num);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Você inseriu um tipo de dado incorreto");
+        }
+        
+        return num;
     }
 }
