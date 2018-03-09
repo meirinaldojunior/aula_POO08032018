@@ -5,6 +5,7 @@
  */
 package aula_poo08032018;
 
+import javafx.application.Application;
 import javax.swing.JOptionPane;
 
 /**
@@ -39,9 +40,20 @@ public class Aula_POO08032018 {
         
         Calculadora calc = new Calculadora();
         
+        //Define o tipo do calculo
+        int op = JOptionPane.showConfirmDialog(null, "Deseja utilizar o modo padrão de cálculo?");
+        if(op == JOptionPane.YES_OPTION){
+            calc.mudaPadrao(true);
+        }else if(op == JOptionPane.NO_OPTION){
+            calc.mudaPadrao(false);
+        }else{
+            JOptionPane.showMessageDialog(null, "Você cancelou a operação");
+            System.exit(0);
+        }
+        
         calc.exibe(String.valueOf(calc.soma(calc.solicitaNumero("Digite um número para soma"), 
                                             calc.solicitaNumero("Digite outro número"))));
-        
+               
         calc.exibe(String.valueOf(calc.multiplica(calc.solicitaNumero("Digite um número para Multiplicação"), 
                                                   calc.solicitaNumero("Digite outro número"))));
 

@@ -70,4 +70,12 @@ public class Calculadora {
         
         return num;
     }
+    
+    /**
+     * Mudar o tipo de calculo de acordo com a opção do usuário
+     * @param x parametro booleano para para mudar o tipo de calculo da operação;
+     */
+    public static void mudaPadrao(Boolean x){
+        padrao = x;
+    }
 }
