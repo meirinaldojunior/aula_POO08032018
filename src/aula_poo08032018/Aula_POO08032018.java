@@ -23,7 +23,6 @@ public class Aula_POO08032018 {
          * Executa métodos de input e output de dados no objeto msg;
          */
         String nomeRecebido;
-        Msg msg = new Msg();
         
         nomeRecebido = Msg.prompt("Insira um texto");
         Msg.mostra(nomeRecebido);
@@ -48,7 +47,7 @@ public class Aula_POO08032018 {
         switch (op) {
             case JOptionPane.YES_OPTION:
                 calc.mudaPadrao(true);
-                opA = "Soma";
+                opA = "Somar";
                 opB = "Multiplicar";
                 break;
             case JOptionPane.NO_OPTION:
