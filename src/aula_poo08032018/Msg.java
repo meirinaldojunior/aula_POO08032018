@@ -13,13 +13,6 @@ import javax.swing.JOptionPane;
  */
 public class Msg {
     
-   /**
-    * Exibe uma caixa de diálogo, para input de dados
-    * @param x uma string com o texto a ser exibido na caixa;
-    * @return uma string com o odado digitado pelo usuário;
-    */
-    
-    
     /**
      * Método construtor da classe
      */
@@ -27,6 +20,11 @@ public class Msg {
         
     }
     
+   /**
+    * Exibe uma caixa de diálogo, para input de dados
+    * @param x uma string com o texto a ser exibido na caixa;
+    * @return uma string com o odado digitado pelo usuário;
+    */   
     public static String prompt(String x){
         return JOptionPane.showInputDialog(x);
     }
